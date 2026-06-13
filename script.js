@@ -73,7 +73,7 @@ async function analyzeReport() {
         formData.append("file", file);
 
         const response = await fetch(
-            "https://hakeemm-3.onrender.com/api/analyze-file",
+            "https://hakeemm-7.onrender.com/api/analyze-file",
             {
                 method: "POST",
                 body: formData
