@@ -5,7 +5,7 @@ async function login() {
 
     try {
 
-        const res = await fetch("http://localhost:5000/api/login", {
+        const res = await fetch("https://hakeemm-7.onrender.com/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44,7 +44,7 @@ async function login(){
     text.style.opacity = "0.6";
 
     try {
-        const response = await fetch("http://localhost:5000/api/login", {
+        const response = await fetch("https://hakeemm-7.onrender.com/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
