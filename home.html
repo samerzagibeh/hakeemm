@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حكيم - AI Health Assistant</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dark-mode.css">
+
+
+</head>
+
+</style>
+<body>
+
+
+<div class="container">
+
+    <div class="header">
+        <h1>حكيم — AI Health Assistant</h1>
+
+        <p>
+            ارفع تقريرك الطبي وسيقوم الذكاء الاصطناعي بتحليله
+            وشرح الحالة بلغة بسيطة
+        </p>
+    </div>
+
+    <div class="main-section">
+
+        <!-- رفع التقرير -->
+
+        <div class="card">
+
+            <h2>رفع التقرير الطبي</h2>
+
+            <div class="upload-box" id="drop-area">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <div class="robot-animation">
+                    🤖
+                </div>
+
+                <div class="heartbeat-container">
+                    <canvas id="heartbeatCanvas"></canvas>
+                </div>
+
+                <p>
+                    اسحب الملف وضعه هنا أو اضغط للاختيار
+                </p>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    hidden>
+
+            </div>
+
+            <button onclick="analyzeReport()">
+                تحليل التقرير بالذكاء الاصطناعي
+            </button>
+
+        </div>
+
+        <!-- النتائج -->
+
+        <div class="card">
+
+            <h2 class="green">
+                نتائج التحليل
+            </h2>
+
+            <div class="result-box" id="result">
+
+                <h3>نتيجة التحليل</h3>
+
+                <p>
+                    بانتظار التحليل...
+                </p>
+
+            </div>
+
+            <div class="result-box">
+
+                <h3>شرح مبسط</h3>
+
+                <p id="explanation">
+                    الحالة ليست خطيرة حالياً لكن تحتاج متابعة دورية.
+                </p>
+
+            </div>
+
+            <div class="result-box">
+
+                <h3>الطبيب المقترح</h3>
+
+                <p class="doctor" id="doctor">
+                    طبيب باطنية / غدد صماء
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   <div class="menu-container">
+    <button id="menuBtn" class="menu-btn">+</button>
+
+    <div class="menu-items" id="menuItems">
+         <a href="#"><i class="fas fa-user"></i> Profile</a>
+        <a href="setting.html">
+    <i class="fas fa-cog"></i> Settings
+</a>
+        <a href="#"><i class="fas fa-phone"></i> اتصل بنا</a>
+       <a href="#" onclick="logout()">
+    <i class="fas fa-sign-out-alt"></i> تسجيل خروج
+</a>
+    </div>
+</div>
+    <div class="features">
+
+        <div class="feature-card">
+
+            <div class="icon">🧠</div>
+
+            <h3>تحليل ذكي</h3>
+
+            <p>
+                قراءة التقارير الطبية باستخدام الذكاء الاصطناعي
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">📄</div>
+
+            <h3>تبسيط النتائج</h3>
+
+            <p>
+                شرح طبي مبسط يفهمه جميع المستخدمين
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">👨‍⚕️</div>
+
+            <h3>اقتراح الطبيب</h3>
+
+            <p>
+                ترشيح التخصص المناسب حسب الحالة الصحية
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">👁️</div>
+
+            <h3>وعي</h3>
+
+            <p>
+                نظام ذكاء اصطناعي يهدف إلى توعية المواطنين
+                بمخاطر المخدرات وتأثيرها على الفرد والمجتمع
+            </p>
+
+            <button
+                class="wa3i-btn"
+                onclick="window.location.href='wa3i.html'">
+
+                الدخول للنظام
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script src="darkmode.js"></script>
+<script>
+
+
+if (localStorage.getItem("darkMode") === "on") {
+    document.body.classList.add("dark-mode");
+}
+
+</script>
+</body>
+
+</html>

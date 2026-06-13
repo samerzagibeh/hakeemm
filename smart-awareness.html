@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التوعية الذكية</title>
+
+<link href="smart.css" rel="stylesheet">
+<link rel="stylesheet" href="dark-mode.css">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🧠 التوعية الذكية</h1>
+        <p>
+            اسأل أي سؤال متعلق بالمخدرات أو الإدمان
+            وسيتم عرض معلومات توعوية للمساعدة.
+        </p>
+    </div>
+
+    <div class="chat-box">
+
+        <div class="messages" id="messages">
+            <div class="bot-message">
+                مرحباً، أنا مساعد التوعية الذكية. كيف أستطيع مساعدتك؟
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="اكتب سؤالك هنا..."
+            >
+            <button onclick="sendMessage()">إرسال</button>
+        </div>
+
+    </div>
+
+    <a href="wa3i.html" class="back-btn">
+        العودة
+    </a>
+
+</div>
+
+
+
+<script src="smart.js"></script>
+
+
+
+<script>
+window.addEventListener("load", () => {
+    if (localStorage.getItem("darkMode") === "on") {
+        document.body.classList.add("dark-mode");
+    }
+});
+</script>
+</body>
+</html>

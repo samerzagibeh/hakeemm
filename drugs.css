@@ -1,0 +1,149 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    color:#333;
+
+    background:linear-gradient(
+        180deg,
+        #c31432 0%,
+        #d83a56 20%,
+        #e96c83 40%,
+        #f4a9b7 65%,
+        #fde3e8 85%,
+        #ffffff 100%
+    );
+
+    min-height:100vh;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:90px 20px;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+    text-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Main Container */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0 60px;
+}
+
+/* Cards */
+.section{
+    background:rgba(255,255,255,0.96);
+    margin-bottom:30px;
+    padding:35px;
+    border-radius:22px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08),
+        0 3px 10px rgba(195,20,50,0.08);
+
+    transition:0.3s ease;
+}
+
+.section:hover{
+    transform:translateY(-5px);
+}
+
+.section h2{
+    color:#c31432;
+    font-size:32px;
+    margin-bottom:20px;
+    padding-right:15px;
+    border-right:5px solid #c31432;
+}
+
+.section p{
+    font-size:20px;
+    line-height:2;
+}
+
+.section ul{
+    padding-right:25px;
+}
+
+.section li{
+    font-size:20px;
+    line-height:2;
+    margin-bottom:8px;
+}
+
+/* Button */
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 35px;
+    background:#c31432;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#9f1028;
+    transform:scale(1.05);
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:25px;
+    color:white;
+    font-size:18px;
+    margin-top:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .section{
+        padding:25px;
+    }
+
+    .section h2{
+        font-size:26px;
+    }
+
+    .section p,
+    .section li{
+        font-size:18px;
+    }
+}

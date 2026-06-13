@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وعي | التوعية الذكية</title>
+
+    <link rel="stylesheet" href="wa3i.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="dark-mode.css">
+</head>
+
+<body>
+
+    <div class="wa3i-container">
+
+        <header class="hero">
+
+            <div class="hero-content">
+
+                <h1>نظام وعي</h1>
+
+                <p>
+                    منصة توعوية ذكية تهدف إلى تعزيز الوعي بمخاطر المخدرات
+                    وتأثيرها الصحي والنفسي والاجتماعي باستخدام تقنيات
+                    الذكاء الاصطناعي.
+                </p>
+
+                <button id="exploreBtn">
+                    استكشف الخدمات
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="100">0</h2>
+                <span>% توعية</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="24">0</h2>
+                <span>ساعة دعم</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="500">0</h2>
+                <span>مادة توعوية</span>
+            </div>
+
+        </section>
+
+        <section class="cards" id="services">
+
+            <a href="drugs-damage.html" class="card-link">
+
+                <div class="wa3i-card">
+
+                    <i class="fa-solid fa-ban icon"></i>
+
+                    <h2>أضرار المخدرات</h2>
+
+                    <p>
+                        التعرف على الأضرار الصحية والنفسية
+                        والاجتماعية الناتجة عن الإدمان.
+                    </p>
+
+                </div>
+
+            </a>
+
+            <a href="smart-awareness.html" class="card-link">
+
+                <div class="wa3i-card">
+
+                    <i class="fa-solid fa-brain icon"></i>
+
+                    <h2>التوعية الذكية</h2>
+
+                    <p>
+                        معلومات تفاعلية مدعومة بالذكاء الاصطناعي
+                        لتثقيف المستخدمين بطريقة مبسطة.
+                    </p>
+
+                </div>
+
+            </a>
+
+            <a href="help.html" class="card-link">
+
+                <div class="wa3i-card">
+
+                    <i class="fa-solid fa-user-doctor icon"></i>
+
+                    <h2>طلب المساعدة</h2>
+
+                    <p>
+                        الوصول إلى الجهات المختصة والحصول
+                        على الإرشاد والدعم المناسب.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </section>
+
+        <section class="info-section">
+
+            <h2>لماذا التوعية مهمة؟</h2>
+
+            <p>
+                الوقاية تبدأ بالمعرفة. يساعد نظام وعي على نشر المعلومات
+                الصحيحة حول مخاطر المخدرات وطرق الوقاية منها وأهمية
+                طلب المساعدة المبكرة عند الحاجة.
+            </p>
+
+        </section>
+
+        <a href="home.html" class="back-btn">
+            العودة للصفحة الرئيسية
+        </a>
+
+    </div>
+
+    <script src="wa3i.js"></script>
+
+</body>
+<script src="darkmode.js"></script>
+<script>
+window.addEventListener("load", () => {
+    if (localStorage.getItem("darkMode") === "on") {
+        document.body.classList.add("dark-mode");
+    }
+});
+</script>
+</html>
