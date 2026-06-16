@@ -5,33 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hakim Login</title>
 
-<link rel="stylesheet"
-href="login.css"/>
+<link rel="stylesheet" href="login.css"/>
 <link rel="stylesheet" href="dark-mode.css">
 
-
+<!-- Font Awesome (مهم للأيقونات) -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 </head>
 
 <body>
 
-    <div id="result"></div>
+<div id="result"></div>
 
 <div class="login-box">
 
     <div class="logo">
-
-        
         <img src="hakeem.png" alt="Hakim Logo">
-
         <h1>وعي</h1>
         <p>نظام إدارة العيادات والمراكز الطبية</p>
     </div>
 
-    
-<form onsubmit="return false;">
+    <form onsubmit="return false;">
+
         <div class="input-box">
-          <input type="text" id="username" placeholder="اسم المستخدم">
+            <input type="text" id="username" placeholder="اسم المستخدم">
             <i class="fa-regular fa-user"></i>
         </div>
 
@@ -49,14 +47,22 @@ href="login.css"/>
             <a href="#">نسيت كلمة المرور؟</a>
         </div>
 
-      
-<button id="loginBtn" class="login-btn" type="button" onclick="login()">
-    <span id="btnText">تسجيل الدخول</span>
-    <span id="loader" class="loader" style="display:none;"></span>
-</button>
-
+        <button id="loginBtn" class="login-btn" type="button" onclick="login()">
+            <span id="btnText">تسجيل الدخول</span>
+            <span id="loader" class="loader" style="display:none;"></span>
+        </button>
 
     </form>
+
+    <!-- 🔥 إضافة إنشاء حساب -->
+    <div style="margin-top:15px; text-align:center; font-size:14px;">
+        <p style="color:#666;">
+            ما عندك حساب؟
+            <a href="signup.html" style="color:#007bff; font-weight:bold; text-decoration:none;">
+                إنشاء حساب
+            </a>
+        </p>
+    </div>
 
     <div class="footer">
         جميع الحقوق محفوظة © وعي 2026
@@ -64,13 +70,14 @@ href="login.css"/>
 
 </div>
 
-
 <script src="login.js"></script>
 <script src="darkmode.js"></script>
+
 <script>
 if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
 }
 </script>
+
 </body>
 </html>
