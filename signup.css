@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start; /* مهم */
+    padding-top:110px; /* نزول البوكس بشكل متوازن */
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+    linear-gradient(135deg,#0066a1,#12b6d9);
+    overflow:hidden;
+    position:relative;
+}
+
+/* خلفية AI */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("AI.jpg") center center/cover no-repeat;
+    z-index:-2;
+    animation:zoomBg 4s ease-in-out infinite alternate;
+}
+
+/* طبقة تعتيم */
+body::after{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+    z-index:-1;
+}
+
+@keyframes zoomBg{
+    from{ transform:scale(1); }
+    to{ transform:scale(1.1); }
+}
+
+/* صندوق التسجيل */
+.signup-box{
+    width:420px;
+    background:none;
+    border-radius:30px;
+    padding:40px 35px;
+    text-align:center;
+    color:white;
+    position:relative;
+    z-index:10;
+
+    animation:fadeIn 0.6s ease;
+}
+
+/* دخول ناعم */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* inputs */
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:white;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.input-box input:focus{
+    transform:scale(1.02);
+    box-shadow:0 0 12px rgba(0,180,219,0.5);
+}
+
+/* زر */
+.signup-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(90deg,#00b4db,#005c97);
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+.signup-btn:hover{
+    transform:scale(1.05);
+}
+
+/* نص تحت */
+.signup-box p{
+    color:rgba(255,255,255,0.9);
+    font-size:14px;
+    margin-top:18px;
+}
+
+/* رابط */
+.signup-box a{
+    color:#ffffff;
+    font-weight:bold;
+    text-decoration:underline;
+    transition:0.3s;
+}
+
+.signup-box a:hover{
+    color:#00b4db;
+}
+
+/* loader */
+.loader {
+    width:16px;
+    height:16px;
+    border:3px solid rgba(255,255,255,.4);
+    border-top:3px solid #fff;
+    border-radius:50%;
+    display:inline-block;
+    animation:spin .8s linear infinite;
+    margin-right:8px;
+    vertical-align:middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.signup-box h2{
+    margin-top: -15px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transform: translateY(-5px);
+}
