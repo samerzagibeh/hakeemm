@@ -317,3 +317,141 @@ body.dark-mode{
     color:#e5e7eb !important;
 }
 
+:root {
+            --nav-bg: #ffffff;
+            --nav-text: #333333;
+            --primary-blue: #0066ff;
+        }
+
+        /* دعم الوضع الليلي للشريط العلوي */
+        body.dark-mode {
+            --nav-bg: #1a1a1a;
+            --nav-text: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* تصميم النبار الأساسي */
+        .navbar {
+            background-color: var(--nav-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            font-family: sans-serif;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        /* اليمين: الشعار */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-blue);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* المنتصف: الروابط */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--nav-text);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* اليسار: زر الإعدادات المنسدل */
+        .nav-menu-dropdown {
+            position: relative;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: #0052cc;
+        }
+
+        .nav-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* القائمة المنسدلة */
+        .dropdown-items {
+            display: none;
+            position: absolute;
+            left: 0; /* تفتح باتجاه اليمين لأن التوجه RTL */
+            top: 120%;
+            background-color: var(--nav-bg);
+            min-width: 180px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dropdown-items a {
+            color: var(--nav-text);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .dropdown-items a:hover {
+            background-color: rgba(0, 102, 255, 0.1);
+            color: var(--primary-blue);
+        }
+
+        /* إظهار القائمة عند التفعيل */
+        .dropdown-items.show {
+            display: block;
+        }
+
+        /* تعديل المسافة العلوية للمحتوى لكي لا يختفي تحت النبار الثابت */
+        .container {
+            margin-top: 100px; 
+        }
+        
