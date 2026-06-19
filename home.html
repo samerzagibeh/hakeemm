@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>وعي - AI Health Assistant</title>
 
-    <!-- الملفات الخارجية -->
+  
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="dark-mode.css">
 
-    <!-- التنسيقات الإضافية للـ Footer والتمرير السلس -->
+   
     <style>
-        /* تفعيل التمرير السلس للأسفل بانسيابية */
+       
         html {
             scroll-behavior: smooth;
         }
@@ -30,7 +30,7 @@
             --text-muted: #a0a0a0;
         }
 
-        /* تنسيق الـ Footer */
+       
         .main-footer {
             background-color: var(--footer-bg);
             border-top: 1px solid var(--border-color);
@@ -60,7 +60,7 @@
             font-size: 15px;
         }
 
-        /* أيقونات التواصل الاجتماعي */
+       
         .social-links {
             display: flex;
             gap: 25px;
@@ -74,7 +74,7 @@
             text-decoration: none;
         }
 
-        /* تأثير الألوان عند تمرير الماوس */
+       
         .social-links a.instagram:hover {
             color: #e1306c;
             transform: scale(1.15);
@@ -86,7 +86,7 @@
         }
 
         .social-links a.twitter:hover {
-            color: #1da1f2; /* لون منصة X / Twitter */
+            color: #1da1f2; 
             transform: scale(1.15);
         }
 
@@ -98,26 +98,26 @@
 </head>
 <body>
 
-<!-- شريط التنقل العلوي المحدث -->
+
 <nav class="navbar">
     <div class="nav-container">
         
-        <!-- اليمين: الشعار والهوية -->
+        
         <a href="#" class="nav-logo">
             <span>وعي</span>
             <i class="fa-solid fa-heart-pulse"></i>
         </a>
 
-        <!-- المنتصف: الروابط الجديدة -->
+        
         <ul class="nav-links">
             <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
             <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
-            <!-- تم ربط الرابط بمعرّف الـ Footer الأسفل (#contactSection) -->
+            
             <li><a href="#contactSection"><i class="fas fa-phone"></i> اتصل بنا</a></li>
             <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a></li>
         </ul>
 
-        <!-- تم ترك الجانب الأيسر فارغاً ليعطي توازناً بصرياً ممتازاً مع بقاء الروابط في المنتصف -->
+        
         <div style="width: 80px;"></div>
 
     </div>
@@ -126,72 +126,87 @@
 <div class="container">
 
     <div class="main-section">
+
         <!-- رفع التقرير -->
         <div class="card">
             <h2>رفع التقرير الطبي</h2>
+
             <div class="upload-box" id="drop-area">
                 <i class="fa-solid fa-cloud-arrow-up"></i>
+
                 <div class="robot-animation">🤖</div>
+
                 <div class="heartbeat-container">
                     <canvas id="heartbeatCanvas"></canvas>
                 </div>
+
                 <p>اسحب الملف وضعه هنا أو اضغط للاختيار</p>
+
                 <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" hidden>
             </div>
+
             <button onclick="analyzeReport()">تحليل التقرير بالذكاء الاصطناعي</button>
         </div>
 
-        <!-- النتائج -->
+        
         <div class="card">
+
             <h2 class="green">نتائج التحليل</h2>
-            <div class="result-box" id="result">
-                <h3>نتيجة التحليل</h3>
-                <p>بانتظار التحليل...</p>
+
+            <div class="result-box result-area" id="result">
+                <p>سيظهر تحليل التقرير هنا بعد رفع الملف...</p>
             </div>
-            <div class="result-box">
-                <h3>شرح مبسط</h3>
-                <p id="explanation">الحالة ليست خطيرة حالياً لكن تحتاج متابعة دورية.</p>
-            </div>
+
             <div class="result-box">
                 <h3>الطبيب المقترح</h3>
-                <p class="doctor" id="doctor">طبيب باطنية / غدد صماء</p>
+                <p class="doctor" id="doctor">بانتظار التحليل...</p>
             </div>
-        </div>
-    </div>
 
+        </div>
+
+    </div> 
+
+   
     <div class="features">
+
         <div class="feature-card">
             <div class="icon">🧠</div>
             <h3>تحليل ذكي</h3>
             <p>قراءة التقارير الطبية باستخدام الذكاء الاصطناعي</p>
         </div>
+
         <div class="feature-card">
             <div class="icon">📄</div>
             <h3>تبسيط النتائج</h3>
             <p>شرح طبي مبسط يفهمه جميع المستخدمين</p>
         </div>
+
         <div class="feature-card">
             <div class="icon">👨‍⚕️</div>
             <h3>اقتراح الطبيب</h3>
             <p>ترشيح التخصص المناسب حسب الحالة الصحية</p>
         </div>
+
         <div class="feature-card">
             <div class="icon">👁️</div>
             <h3>وعي</h3>
             <p>نظام ذكاء اصطناعي يهدف إلى توعية المواطنين بمخاطر المخدرات وتأثيرها على الفرد والمجتمع</p>
-            <button class="wa3i-btn" onclick="window.location.href='wa3i.html'">الدخول للنظام</button>
+
+            <button class="wa3i-btn" onclick="window.location.href='wa3i.html'">
+                الدخول للنظام
+            </button>
         </div>
+
     </div>
 
 </div>
 
-<!-- الـ Footer المضاف في أسفل الصفحة -->
 <footer class="main-footer" id="contactSection">
     <div class="footer-content">
         <h3>اتصل بنا</h3>
         <p>يسعدنا تواصلكم معنا عبر منصات التواصل الاجتماعي الرسمية</p>
         
-        <!-- أزرار التواصل الاجتماعي مع الأيقونات والتأثيرات الحركية -->
+       
         <div class="social-links">
             <a href="https://instagram.com" target="_blank" class="instagram" title="انستغرام">
                 <i class="fab fa-instagram"></i>
@@ -208,7 +223,7 @@
     </div>
 </footer>
 
-<!-- السكربتات -->
+
 <script src="script.js"></script>
 <script src="darkmode.js"></script>
 
